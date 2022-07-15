@@ -38,18 +38,15 @@ void  _div(stack_t **head, unsigned  int line_number)
 
 		exit(EXIT_FAILURE);
 	}
-
 	current = *head; /*current equals to head to make division*/
 
 	if (current->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", line_number);
-		
+
 		exit(EXIT_FAILURE);
 	}
-
 	current->next->n = current->next->n / current->n; /*do the division*/
-	
 	*head = current->next;
 	free(current);
 	current->prev = NULL;

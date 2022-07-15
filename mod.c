@@ -20,6 +20,7 @@ void  _mod(stack_t **head, unsigned  int line_number)
 	{
 		fprintf(stderr, "L%u: can't mod, stack too short\n", line_number);
 		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 
@@ -28,7 +29,7 @@ void  _mod(stack_t **head, unsigned  int line_number)
 		current = current->next;
 		nnodes++;
 	}
-	
+
 	if (nnodes + 1 <= 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);

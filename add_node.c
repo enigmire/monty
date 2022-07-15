@@ -13,6 +13,7 @@
 void add_node(stack_t **stack, int argument)
 {
 	stack_t *new_node = NULL;
+
 	new_node = malloc(sizeof(stack_t));
 
 	if (new_node == NULL)

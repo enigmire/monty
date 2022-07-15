@@ -1,12 +1,12 @@
-/*
-* 0-puts_recursion.c
-*
-* By: enigmire <meathical@gmail.com>
-*
-* Created: 2022-07-15 13:20:22   $enigmire
-* Updated: 2022-07-15 13:20:22 by enigmire
-*
-*/
+/**********************************************/
+/* 0-puts_recursion.c */
+/*  */
+/* By: enigmire <meathical@gmail.com> */
+/* */
+/* Created: 2022-07-15 13:20:22   $enigmire */
+/* Updated: 2022-07-15 13:20:22 by enigmire */
+/*	*/
+/**************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,24 +51,19 @@ int main(int argc, char **argv)
 		fprintf(stderr, "%s", "Error: Can't open file <file>\n");
 		exit(EXIT_FAILURE);
 	}
-
 	arguments = NULL;
 
 	while (fgets(line, LINE, fp) != NULL)
 	{
 		op  = get_opcode_and_arg(line);
 		arguments = op->arg;
-
 		/*code = strtok(line, " \t\r\v\f\n");*/
 		/*printf("co: %s op:  %s \n",code,opcode_arg->opcode);*/
-		
 		if (op->opcode != NULL && op->opcode[0] != '#' && op->opcode[0] != '\n')
 			get_opcode(&stack, nbLine, op->opcode);
-
 		/*_puts(line);*/
 		nbLine++;
 	}
-
 	UNUSED(stack);
 	UNUSED(code);
 	UNUSED(arguments);

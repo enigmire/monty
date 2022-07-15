@@ -12,6 +12,7 @@
 void add_node_queue(stack_t **stack, int argument)
 {
 	stack_t *new_node = NULL, *last = NULL;
+
 	new_node = malloc(sizeof(stack_t));
 
 	if (new_node == NULL)

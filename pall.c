@@ -13,6 +13,7 @@
 void  _pall(stack_t **pile, unsigned  int line_number)
 {
 	stack_t *ptr;
+
 	ptr = *pile;
 
 	while (ptr != NULL)
